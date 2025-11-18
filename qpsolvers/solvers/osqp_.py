@@ -124,7 +124,7 @@ def osqp_solve_problem(
     if lb is not None or ub is not None:
         lb = lb if lb is not None else np.full(q.shape, -np.inf)
         ub = ub if ub is not None else np.full(q.shape, +np.inf)
-        E = spa.eye(q.shape[0])
+        E = spa.eye(q.shape[0], format='csc')
         A_osqp = E if A_osqp is None else spa.vstack([A_osqp, E], format="csc")
         l_osqp = lb if l_osqp is None else np.hstack([l_osqp, lb])
         u_osqp = ub if u_osqp is None else np.hstack([u_osqp, ub])
