@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - docs: Document warm-starting for all solver interfaces
 
+### Changed
+
+- Slightly more explicit error message when a solver is not found
+
 ## [4.8.1] - 2025-08-07
 
 ### Changed
