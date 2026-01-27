@@ -68,7 +68,7 @@ class TestSolveProblem(unittest.TestCase):
                             if solver in ["mosek", "qpax", "sip"]
                             else (
                                 1e-6
-                                if solver in ["cvxopt", "kvxopt", "qpswift", "scs"]
+                                if solver in ["copt", "cvxopt", "kvxopt", "qpswift", "scs"]
                                 else 5e-7 if solver in ["gurobi"] else 1e-7
                             )
                         )
@@ -124,7 +124,7 @@ class TestSolveProblem(unittest.TestCase):
                         if solver in ["cvxopt", "kvxopt", "qpax"]
                         else (
                             1e-5
-                            if solver in ["highs", "osqp"]
+                            if solver in ["copt", "highs", "osqp"]
                             else (
                                 5e-7
                                 if solver
