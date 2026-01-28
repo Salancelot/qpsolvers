@@ -79,9 +79,14 @@ def copt_solve_problem(
     """
     if initvals is not None:
         warnings.warn("warm-start values are ignored by this wrapper")
-    env = coptpy.Envr()
+
+    env_config = coptpy.EnvrConfig()
+    if not verbose:
+        env_config.set("nobanner", "1")
+
+    env = coptpy.Envr(env_config)
     model = env.createModel()
-    model.matrixmodelmode = "legacy"
+
     if not verbose:
         model.setParam(COPT.Param.Logging, 0)
     for param, value in kwargs.items():
@@ -110,7 +115,14 @@ def copt_solve_problem(
     solution.extras["status"] = model.status
     solution.found = model.status in (COPT.OPTIMAL, COPT.IMPRECISE)
     if solution.found:
-        solution.x = x.X
+        # COPT v8.0.0+ Changed the default Python matrix modeling API
+        #  from `numpy` to its own implementation.
+        #  `coptpy.NdArray` does not support operators such as ">=",
+        #  so convert to `np.ndarray`
+        if hasattr(x.X, "tonumpy"):
+            solution.x = x.X.tonumpy()
+        else:
+            solution.x = x.X
         __retrieve_dual(solution, ineq_constr, eq_constr, lb_constr, ub_constr)
     return solution
 

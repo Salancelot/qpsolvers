@@ -116,9 +116,9 @@ with 200 optimization variables fails with the following warning:
 COPT
 ------
 
-COPT comes with a `one-line pip installation
+COPT comes with an installation doc at  `COPT installation
 <https://guide.coap.online/copt/en-doc/install.html>`_
-where you can fetch the solver directly from the company servers:
+where you can install by pip:
 
 .. code:: bash
 
