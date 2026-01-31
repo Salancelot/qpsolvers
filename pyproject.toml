@@ -119,6 +119,7 @@ furo = ">=2023.8.17"
 sphinx-mathjax-offline = "*"
 
 [tool.pixi.feature.licensed.pypi-dependencies]
+coptpy = ">=7.0.0"
 mosek = ">=10.0.40"
 
 [tool.pixi.feature.licensed.tasks]
