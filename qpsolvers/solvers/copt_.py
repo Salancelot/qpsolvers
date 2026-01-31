@@ -9,8 +9,8 @@
 
 The COPT Optimizer suite ships several solvers for mathematical programming,
 including problems that have linear constraints, bound constraints, integrality
-constraints, cone constraints, or quadratic constraints. It targets modern CPU/GPU
-architectures and multi-core processors,
+constraints, cone constraints, or quadratic constraints. 
+It targets modern CPU/GPU architectures and multi-core processors,
 
 See the :ref:`installation page <copt-install>` for additional instructions
 on installing this solver.
