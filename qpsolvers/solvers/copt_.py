@@ -207,7 +207,7 @@ def copt_solve_qp(
     Notes
     -----
     Keyword arguments are forwarded to COPT as parameters. For instance, we
-    can call ``COPT_solve_qp(P, q, G, h, u, FeasTol=1e-8,
+    can call ``copt_solve_qp(P, q, G, h, u, FeasTol=1e-8,
     DualTol=1e-8)``. COPT settings include the following:
 
     .. list-table::
