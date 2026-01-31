@@ -77,7 +77,7 @@ When imported, qpsolvers loads all the solvers it can find and lists them in ``q
 | Solver                                                                       | Keyword         | Algorithm | API | License |
 |------------------------------------------------------------------------------|-----------------| --------- | --- | ------- |
 | [Clarabel](https://github.com/oxfordcontrol/Clarabel.rs)                     | ``clarabel``    | Interior point | Sparse | Apache-2.0 |
-| [COPT](https://www.shanshu.ai/copt)                                              | ``copt``        | Interior point | Sparse | Commercial |
+| [COPT](https://www.shanshu.ai/copt)                                          | ``copt``        | Interior point | Sparse | Commercial |
 | [CVXOPT](http://cvxopt.org/)                                                 | ``cvxopt``      | Interior point | Dense | GPL-3.0 |
 | [DAQP](https://github.com/darnstrom/daqp)                                    | ``daqp``        | Active set | Dense | MIT |
 | [ECOS](https://web.stanford.edu/~boyd/papers/ecos.html)                      | ``ecos``        | Interior point | Sparse | GPL-3.0 |
